@@ -5,13 +5,11 @@ html {
 :root {
     --color-background: #f7fbff;
     --color-primario: #696771;
-    --color-fonts-secundarias: #a8a7aa;
-    --color-secundario: #001233;
+    --color-fonts-secundarias: #a8a7aa;;
     --color-rojo: #E63946;
     --color-verde: #59BE37;
     --color-azul: #457B9D;
     --color-celeste: #A8DADC;
-    --color-azul-oscuro: #3D70B8;
     --color-fondo-inputs: #f1f4f8;
 
 }
@@ -20,7 +18,7 @@ html {
     margin: 0%;
     padding: 0%;
     font-family: 'Prompt', sans-serif;
-    
+        
 }
 
 .botones_general {
@@ -78,8 +76,6 @@ html {
 body {
     background-color: var(--color-background);
     width: 100%;
-    height: 10%;
-    
 }
 
 .container-principal {
@@ -91,10 +87,11 @@ body {
 }
 
 .big-container {
-    margin: 3rem 0;
+    position: relative;
+    top: 50px;
     width: 564px;
     min-width: 375px;
-    height: 700px;
+    max-height: 1px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -108,25 +105,32 @@ body {
 .card-divider {
     background-color: var(--color-background);
     width: 564px;
-    height: 500px;
-    min-width: 375px;
+    height: 100%;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.card-divider.activado {
+    position: relative;
+    top: 30px;
+    height: 450px;
+}
+
+.card-divider:hover {
+    box-shadow: 10px 10px 18px -4px rgba(166,166,166,0.5);
+    -webkit-box-shadow: 10px 10px 18px -4px rgba(166,166,166,0.5);
+    -moz-box-shadow: 10px 10px 18px -4px rgba(166,166,166,0.5);
 }
 
 .container-estilo {
     background-color: transparent;
     border-radius: 15px;
     box-shadow: 0px 0px 18px -4px rgba(166,166,166,0.5);
--webkit-box-shadow: 0px 0px 18px -4px rgba(166,166,166,0.5);
--moz-box-shadow: 0px 0px 18px -4px rgba(166,166,166,0.5);
+    -webkit-box-shadow: 0px 0px 18px -4px rgba(166,166,166,0.5);
+    -moz-box-shadow: 0px 0px 18px -4px rgba(166,166,166,0.5);
 
-background-image: repeating-linear-gradient(
-135deg, rgba(168, 167, 170, 0.2) 0, rgba(168, 167, 170, 0.2) 0.5px, transparent 0, transparent 50%);
-    background-size: 10px 10px;
-    background-color: #f7fbff;
-    
 }
 
 .h1 {
@@ -160,7 +164,7 @@ background-image: repeating-linear-gradient(
     color: var(--color-fonts-secundarias);
     text-align: center;
     border-style: none;
-    background: transparent;
+    background: var(--color-background);
     font-size: 0.9em;
     box-shadow: 0px 2px 5px 2px rgb(166 166 166 / 30%);
     -webkit-box-shadow: 0px 2px 5px 2px rgb(166 166 166 / 30%);
@@ -210,6 +214,7 @@ input::-webkit-inner-spin-button {
 
 .buttonCalculate {
     background-color: var(--color-azul);
+    margin-top: 10px;
 }
 
 .buttonCalculate:hover{
@@ -437,7 +442,7 @@ footer {
     bottom: 0%;
     display: flex;
     align-items: center;
-    margin-top: 3em;
+
 }
 
 footer ul {
@@ -550,11 +555,6 @@ footer ul li:hover {
     
         transition: 0s;
     }
-
-
-
-
-
 
 
 }
