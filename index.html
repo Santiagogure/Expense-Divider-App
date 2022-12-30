@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisor de Gastos</title>
+    <meta property="og:title" content="Divisor de gastos" />
+    <meta property="og:type" content="web app" />
+    <meta property="og:url" content="https://divisor-de-gastos.vercel.app/" />
+    <script src="https://kit.fontawesome.com/a3fbd95605.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./fontawesome-free-6.0.0-beta2-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container-principal">
+
+    <div id="big-container" class="big-container">
+        <div id="card-divider" class="card-divider container-estilo">
+            <h1 class="h1" onclick=resetAll()>Expense Divider</h1>
+            <form id="form" action="" class="contenedor-inputs">
+                <!-- <label for="monto">Monto </label><input id="monto" type="number"> -->
+                <div class="mini_container">
+                    <label for="participants" class="label_participants fonts-secundarias"> Quantity of people </label>
+                    <button id="substractButton" class="substractButton" type="button">-</button>
+                    <input id="participants" class="input_participants" type="number" min="1" max="10" value="1">
+                    <button id="add_button" class="add_button" type="button">+</button>
+                </div>
+                <div class="container-botones">
+                <button type="button" id="next-button" class="next-button botones_general">Next</button>
+                <button type="reset" id="boton_reset" class="boton_reset botones_general">Reset</button>
+                
+
+                </div>
+
+                <p class="p2 fonts-secundarias">Put the name and amount of each one</p>
+
+            <div id="people-container" class="people-container">
+                
+            </div>
+            <div id="calculoGastos" class="calculoGastos">
+                <button id="buttonCalculate" class="buttonCalculate botones_general toggle" type="button">Calculate</button>
+            </div>
+            
+        </div>
+            <div id="container-resultados" class="container-resultados">
+                <div id="resultados" class="resultados container-estilo flex_column_center"></div>
+                <div id="container-tiene-que-recibir" class="container-tiene-que-recibir-poner contenedor-recibir container-estilo flex_column_center"></div>
+                <div id="container-tiene-que-poner" class="container-tiene-que-recibir-poner contenedor-poner container-estilo flex_column_center"></div>
+                <button type="reset" id="boton_reset_mobile" class="boton_reset_mobile botones_general">Reset</button>
+            </div>
+    </div>
+    <footer>
+        <ul>
+              <li><a href="http://www.linkedin.com/in/adrian-centurion" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li><a href="https://github.com/Santiagogure" target="_blank"><i class="fab fa-github"></i></a></li>
+              <li><a href="https://twitter.com/santigure" target="_blank"><i class="fa-brands fa-twitter"></i></i></a></li>
+        </ul>
+    </footer>
+</main>
+    <script src="./index.js"></script>
+</body>
+</html>
